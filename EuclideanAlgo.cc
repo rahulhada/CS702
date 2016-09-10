@@ -30,9 +30,20 @@ int main()
 	scanf("%d",&a);
 	printf("B=");
 	scanf("%d",&b);
+	
+	// Check for 0
+	if (a == 0 || b == 0){
+		printf("Invalid inputs! Cannot have 0 as input.\n");
+		return 0;
+	} 
+
+	// Check for negative
+	if (a < 0) a = -a;
+	if (b < 0) b = -b;
+
 	c=findgcd(a,b);
 	printf("C=%d\n",c);
-return 0;
+	return 0;
 }
 
 int findgcd(int a, int b)
