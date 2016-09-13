@@ -50,7 +50,7 @@ int main()
 	switch(ch){
 		case 1: c = gcd(a, b);
 		 break;
-		default: printf("Invalif input! Using brute force algorithm!\n");
+		default: printf("Invalid input! Using brute force algorithm!\n");
 		case 2: c = findgcd(a, b);
 		 break;
 	}
