@@ -43,6 +43,10 @@ int main()
 
 	c=findgcd(a,b);
 	printf("C=%d\n",c);
+	
+	// LCM using GCD
+	printf("LCM=%d\n", (a*b)/c);
+	
 	return 0;
 }
 
