@@ -22,9 +22,12 @@
 #include <stdio.h>
 
 int findgcd(int ,int);
+int gcd(int, int);
+
 int main()
 {
 	int a,b,c;
+	int ch;
 	printf("Enter Two numbers to calculate GCD:\n");
 	printf("A=");
 	scanf("%d",&a);
@@ -41,11 +44,27 @@ int main()
 	if (a < 0) a = -a;
 	if (b < 0) b = -b;
 
-	c=findgcd(a,b);
+	printf("User (1) Recursive algorithm or (2) Brute force algorithm? ");
+	scanf("%d", &ch);
+
+	switch(ch){
+		case 1: c = gcd(a, b);
+		 break;
+		default: printf("Invalif input! Using brute force algorithm!\n");
+		case 2: c = findgcd(a, b);
+		 break;
+	}
 	printf("C=%d\n",c);
 	return 0;
 }
 
+// recursive algo
+int gcd(int a, int b){
+	if(a == 0) return b;
+	else gcd(b % a, a);
+}
+
+// brute force
 int findgcd(int a, int b)
 {
 	int d,r;
