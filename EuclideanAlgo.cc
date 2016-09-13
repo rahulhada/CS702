@@ -17,13 +17,19 @@
  * Author : Rahul Hada <hada.rahul@gmail.com>
  * Date   : 06/09/2016 
  */
-// This program is used to calculate GCD using Euclidean algorithm
+/* This program is used to calculate GCD using Euclidean algorithm
+ * In this nischal bhatewara <      > added  bruteforce and recursive approach/functionality and we can also calculate the
+ * CPU time for the each of these approaches.
+ * 
+ */ 
 
 #include <stdio.h>
-
+#include <time.h>
 int findgcd(int ,int);
 int gcd(int, int);
-
+void display_CPU_Time();
+clock_t start,end;
+double cpu_time_usedR,cpu_time_usedB;
 int main()
 {
 	int a,b,c;
@@ -55,25 +61,36 @@ int main()
 		 break;
 	}
 	printf("C=%d\n",c);
+      display_CPU_Time();
 	return 0;
 }
 
+void display_CPU_Time()
+{
+      printf("Recursive CPU Time:%lf",((double) (end - start)) / CLOCKS_PER_SEC);
+}
 // recursive algo
-int gcd(int a, int b){
+int gcd(int a, int b)
+{
+      start = clock();
 	if(a == 0) return b;
 	else gcd(b % a, a);
+      end = clock();
 }
 
 // brute force
 int findgcd(int a, int b)
 {
+
 	int d,r;
 	r=999;
+      start = clock();
 	while (r)
 	{
 		r=a%b;
 		a=b;
 		b=r;
 	}
+      end = clock();
 	return a;
 }
