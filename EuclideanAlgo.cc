@@ -46,7 +46,7 @@ int main()
 	
 	// LCM using GCD
 	int lcm=(a*b)/c;
-	printf("LCM=%d\n", lcm;
+	printf("LCM=%d\n", lcm);
 	
 	return 0;
 }
