@@ -22,9 +22,12 @@
 #include <stdio.h>
 
 int findgcd(int ,int);
+//adding lcm
+int findlcm(int, int);
 int main()
 {
 	int a,b,c;
+	int lcm;
 	printf("Enter Two numbers to calculate GCD:\n");
 	printf("A=");
 	scanf("%d",&a);
@@ -45,10 +48,17 @@ int main()
 	printf("C=%d\n",c);
 	
 	// LCM using GCD
-	int lcm=(a*b)/c;
+	lcm=findlcm(a,b);
 	printf("LCM=%d\n", lcm);
 	
 	return 0;
+}
+//LCM function
+void findlcm(int a, int b)
+{
+	int lcm;
+	lcm=(a*b)/c;
+	
 }
 
 int findgcd(int a, int b)
