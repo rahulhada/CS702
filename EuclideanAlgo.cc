@@ -25,7 +25,9 @@
 
 #include <stdio.h>
 #include <time.h>
-int findgcd(int ,int);
+int gcd_recursive(int ,int);
+int gcd_euclidean(int ,int);
+int gcd_bruteforce(int ,int);
 int gcd(int, int);
 void display_CPU_Time();
 clock_t start,end;
@@ -50,15 +52,19 @@ int main()
 	if (a < 0) a = -a;
 	if (b < 0) b = -b;
 
-	printf("User (1) Recursive algorithm or (2) Brute force algorithm? ");
+	printf("User (1) Recursive Algorithm or (2) Euclidean Algorithm 3) Brute-force Algorithm? ");
 	scanf("%d", &ch);
 
 	switch(ch){
-		case 1: c = gcd(a, b);
+		case 1: c = gcd_recursive(a, b);
 		 break;
+		case 2: c = gcd_euclidean(a, b);
+		break;
+		case 3:
+		//	c= gcd_bruteforce(a,b);
+		break;
 		default: printf("Invalid input! Using brute force algorithm!\n");
-		case 2: c = findgcd(a, b);
-		 break;
+		exit(0);
 	}
 	printf("C=%d\n",c);
       display_CPU_Time();
@@ -69,8 +75,8 @@ void display_CPU_Time()
 {
       printf("Recursive CPU Time:%lf",((double) (end - start)) / CLOCKS_PER_SEC);
 }
-// recursive algo
-int gcd(int a, int b)
+// Recursive Algorithm
+int gcd_recursive(int a, int b)
 {
       start = clock();
 	if(a == 0) return b;
@@ -78,8 +84,8 @@ int gcd(int a, int b)
       end = clock();
 }
 
-// brute force
-int findgcd(int a, int b)
+// Euclidean Algorithm 
+int gcd_euclidean(int a, int b)
 {
 
 	int d,r;
@@ -94,3 +100,4 @@ int findgcd(int a, int b)
       end = clock();
 	return a;
 }
+	
