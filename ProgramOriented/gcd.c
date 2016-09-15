@@ -15,7 +15,7 @@
  *
  *
  * Author : Rahul Hada <hada.rahul@gmail.com>
-          : Nischal Bhatewara <      > 
+          : Nischal M <nischal.bhatewara@gmail.com> 
  * Date   : 06/09/2016 
  */
 #include"gcd.h"
@@ -33,9 +33,7 @@ int gcd_euclidean(long int a, long int b)
 }
 int gcd_recursive(long int a, long int b)
 {
-	if((a%b) == 0) 
-		return b;
-	else 
+	if((a%b) == 0) return b; 
 	return(gcd_recursive(b % a, a));
 }
 int gcd_bruteforce(long int a , long int b)
@@ -49,6 +47,6 @@ int gcd_bruteforce(long int a , long int b)
 		gcd=i;
 		i++;
 	}
-return gcd;
+	return gcd;
 }
 
