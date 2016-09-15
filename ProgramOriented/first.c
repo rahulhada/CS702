@@ -31,9 +31,9 @@ int main()
 	clock_t start,end;
 	printf("Enter Two numbers to calculate GCD:\n");
 	printf("A=");
-	scanf("%d",&a);
+	scanf("%ld",&a);
 	printf("B=");
-	scanf("%d",&b);
+	scanf("%ld",&b);
 	
 	// Check for 0
 	if (a == 0 || b == 0){
