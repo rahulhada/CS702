@@ -18,8 +18,6 @@
           : Nischal Bhatewara <      > 
  * Date   : 06/09/2016 
  */
-/* This program is used to calculate GCD using Euclidean algorithm[Iterative] & [Recursive] , Bruteforce Algorithm
- */ 
 #include"gcd.h"
 int gcd_euclidean(int a, int b)
 {
