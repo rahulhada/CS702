@@ -25,13 +25,13 @@
 /*
 	to find gcd euclidean algorithm with iteration approach
 */
-int gcd_euclidean(int , int);
+int gcd_euclidean(long int , long int);
 /*
 	to find gcd euclidean algorithm with recursive approach
 */
-int gcd_recursive(int , int);
+int gcd_recursive(long int , long int);
 /*
 	to find gcd bruteforce algorithm
 */
-int gcd_bruteforce(int , int);
+int gcd_bruteforce(long int , long int);
 #endif
