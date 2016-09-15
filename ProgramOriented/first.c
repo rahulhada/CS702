@@ -25,7 +25,8 @@
 #include "gcd.h"
 int main()
 {
-	int a,b,c;
+	long int a,b;
+	int c;
 	int ch;
 	clock_t start,end;
 	printf("Enter Two numbers to calculate GCD:\n");
