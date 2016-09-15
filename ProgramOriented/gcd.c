@@ -19,7 +19,7 @@
  * Date   : 06/09/2016 
  */
 #include"gcd.h"
-int gcd_euclidean(int a, int b)
+int gcd_euclidean(long int a, long int b)
 {
 	int d,r;
 	r=999;
@@ -31,14 +31,14 @@ int gcd_euclidean(int a, int b)
 	}
 	return a;
 }
-int gcd_recursive(int a, int b)
+int gcd_recursive(long int a, long int b)
 {
 	if((a%b) == 0) 
 		return b;
 	else 
 	return(gcd_recursive(b % a, a));
 }
-int gcd_bruteforce(int a , int b)
+int gcd_bruteforce(long int a , long int b)
 {
 	int gcd,i;
 	gcd=1;
