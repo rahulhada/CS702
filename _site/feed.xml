@@ -6,13 +6,8 @@
 </description>
     <link>http://silverfoxa.github.io/</link>
     <atom:link href="http://silverfoxa.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-<<<<<<< HEAD
-    <pubDate>Sun, 18 Sep 2016 17:51:43 +0530</pubDate>
-    <lastBuildDate>Sun, 18 Sep 2016 17:51:43 +0530</lastBuildDate>
-=======
-    <pubDate>Sun, 18 Sep 2016 17:50:01 +0530</pubDate>
-    <lastBuildDate>Sun, 18 Sep 2016 17:50:01 +0530</lastBuildDate>
->>>>>>> gh-pages
+    <pubDate>Sun, 18 Sep 2016 18:09:30 +0530</pubDate>
+    <lastBuildDate>Sun, 18 Sep 2016 18:09:30 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
