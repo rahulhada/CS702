@@ -8,8 +8,7 @@
 # Site settings
 title: CS702 | Alliance University
 email: abhijit2294@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  The website is dedicated to our subject CS702 named Cryptography and Netwrok Security.
+description: "The website is dedicated to our subject CS702 named Cryptography and Netwrok Security."
 baseurl: "/CS702" # the subpath of your site, e.g. /blog
 url: "http://silverfoxa.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
