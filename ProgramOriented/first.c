@@ -31,9 +31,6 @@
 
 void mDisplay(int iValue, char* iOps);
 void display_CPU_Time(char* ch);
-char euc[30] = "Eucledean";
-char rec[30] = "Recursive";
-char bru[30] = "BruteForece";
 
 clock_t start,end;
 
@@ -71,20 +68,23 @@ int main()
                 
             case 2:
                 //Euclidean Algorithm implementation
-                mDisplay(gcd_euclidean(a, b), euc);
+                mDisplay(gcd_euclidean(a, b), "Eucledean");
                 break;
                 
             case 1:
                 //Recursive Algorithm implementation
-                mDisplay(gcd_recursive(a, b), rec);
+                mDisplay(gcd_recursive(a, b), "Recursive");
                 break;
                 
             case 3:
                 //Brute Force Algorithm implementation
-                mDisplay(gcd_bruteforce(a,b),bru);
+                mDisplay(gcd_bruteforce(a,b),"BruteForece");
                 break;
             default:
-            printf("Invalid input! Using brute force algorithm!\n");        }
+                if (ch!=-1) {
+                    printf("Invalid input!\n");
+                }
+        }
     } while (ch != -1);
     
 		return 0;
