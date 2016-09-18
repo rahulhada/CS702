@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #PROCEDURE TO RUN THE FILE
 
 <pre>
@@ -26,9 +25,9 @@ GCD VALUE : 9	BruteForece CPU Time:0.035015
 Option = -1
 Invalid input! Using brute force algorithm! 
 </pre>
-=======
-To run the script
 
+#To run the script
+<pre>
     chmod 777 autoRun.sh
     ./autoRun.sh 10
   
@@ -40,4 +39,4 @@ to use custom filename to run
 
     gcc first.c gcd.c -o output.out
     ./autoRun.sh output.out 5
->>>>>>> rahulhada/master
+</pre>

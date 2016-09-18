@@ -35,11 +35,10 @@ void display_CPU_Time(char* ch);
 
 clock_t start,end;
 
-int main()
+int main();
 
 void autoRun(long int, long int);
 double getTime(clock_t, clock_t);
-
 // global variables
 clock_t start,end;
 
@@ -83,15 +82,14 @@ int main(int argc, char const *argv[])
         start = clock();
         
         switch (ch) {
-                
-            case 2:
-                //Euclidean Algorithm implementation
-                mDisplay(gcd_euclidean(a, b), "Eucledean");
-                break;
-                
+
             case 1:
                 //Recursive Algorithm implementation
                 mDisplay(gcd_recursive(a, b), "Recursive");
+                break;
+            case 2:
+                //Euclidean Algorithm implementation
+                mDisplay(gcd_euclidean(a, b),"Eucledean");
                 break;
                 
             case 3:
@@ -118,8 +116,11 @@ void mDisplay(int iValue, char* iOps) {
 //Returning CPU_TIME difference
 void display_CPU_Time(char* ch) {
     end = clock();
-    printf("%s",ch);
-        printf(" CPU Time:%lf\n", ((double) (end - start)) / CLOCKS_PER_SEC);
+    printf("%s CPU Time:%lf\n",ch, getTime(start,end));
+}
+
+double getTime(clock_t start, clock_t end){
+	return ((double) (end - start)) / CLOCKS_PER_SEC;
 }
 
 void autoRun(long int a, long int b){
