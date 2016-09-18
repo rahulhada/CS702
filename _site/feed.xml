@@ -4,10 +4,10 @@
     <title>CS702 | Alliance University</title>
     <description>The website is dedicated to our subject CS702 named Cryptography and Netwrok Security.
 </description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Sep 2016 20:10:52 +0530</pubDate>
-    <lastBuildDate>Sat, 17 Sep 2016 20:10:52 +0530</lastBuildDate>
+    <link>http://silverfoxa.github.io/</link>
+    <atom:link href="http://silverfoxa.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 18 Sep 2016 17:50:01 +0530</pubDate>
+    <lastBuildDate>Sun, 18 Sep 2016 17:50:01 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Sat, 17 Sep 2016 12:37:22 +0530</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2016/09/17/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2016/09/17/welcome-to-jekyll.html</guid>
+        <link>http://silverfoxa.github.io/jekyll/update/2016/09/17/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://silverfoxa.github.io/jekyll/update/2016/09/17/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
