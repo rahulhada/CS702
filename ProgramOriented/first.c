@@ -15,7 +15,7 @@
  *
  *
  * Author : Rahul Hada <hada.rahul@gmail.com>
-          : Nischal Bhatewara <      > 
+          : Nischal M <nischal.bhatewara@gmail.com> 
  * Date   : 06/09/2016 
  */
 /* This program is used to calculate GCD using Euclidean algorithm[Iterative] & [Recursive] , Bruteforce Algorithm
@@ -27,6 +27,7 @@
  * ./test**/
 #include<stdio.h>
 #include <time.h>
+#include <stdlib.h> // for strtol
 #include "gcd.h"
 
 void mDisplay(int iValue, char* iOps);
@@ -35,10 +36,27 @@ void display_CPU_Time(char* ch);
 clock_t start,end;
 
 int main()
+
+void autoRun(long int, long int);
+double getTime(clock_t, clock_t);
+
+// global variables
+clock_t start,end;
+
+int main(int argc, char const *argv[])
 {
+
+	// check for given args
+	if(argc > 0 && argc == 3){
+		autoRun((long int) strtol(argv[1], NULL, 10) // A
+			, (long int) strtol(argv[2], NULL, 10) // B
+			);
+		return 0;
+	}
+
 	long int a,b;
 	int c;
-	int ch=0;
+    int ch=0;
 	
 	printf("Enter Two numbers to calculate GCD:\n");
 	printf("A = ");
@@ -102,4 +120,41 @@ void display_CPU_Time(char* ch) {
     end = clock();
     printf("%s",ch);
         printf(" CPU Time:%lf\n", ((double) (end - start)) / CLOCKS_PER_SEC);
+}
+
+void autoRun(long int a, long int b){
+
+	long int c;
+	// open file to write output
+    FILE *fptr;
+    fptr = fopen("values.txt","a");
+    if(fptr == NULL){
+       printf("File Error!");
+       exit(1);
+    }
+	
+	printf("Running for %ld and %ld\n", a, b);
+	fprintf(fptr, "\nA:%ld\tB:%ld\tGCD:%d", a, b, gcd_euclidean(a, b));
+
+   	// recursive
+    start = clock();
+    c = gcd_recursive(a, b);
+    end = clock();
+   	fprintf(fptr, "\nRecursive: %lf", getTime(start, end));
+
+   	// euclidean
+    start = clock();
+    c = gcd_euclidean(a, b);
+    end = clock();
+   	fprintf(fptr, "\nEuclidean: %lf", getTime(start, end));
+
+	// brute force
+    start = clock();
+    c = gcd_bruteforce(a, b);
+    end = clock();
+   	fprintf(fptr, "\nBruteforce: %lf", getTime(start, end));
+
+	fprintf(fptr, "\n\n"); // keep file legible
+
+    fclose(fptr);
 }
