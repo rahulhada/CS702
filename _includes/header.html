@@ -1,27 +1,159 @@
-<header class="site-header">
 
-  <div class="wrapper">
+<!-- ~~~=| Header START |=~~~ -->
+<header class="header_area">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <!-- ~~~=| Logo Area START |=~~~ -->
+    <div class="header_logo_area">
+        <div class="" style="padding-left: 15px; padding-right: 15px;">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="logo"><a href="index.html"><img src="images/logo.png" alt="Site Logo"/></a></div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-9">
+                    <!-- ~~~=| Main Navigation START |=~~~ -->
+                    <div class="mainnav">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <nav class="main_nav_box">
+                                        <ul id="nav">
+                                            <li class="nav_news"><a href="">Session Plan</a>
+                                            </li>
+                                            <li class="nav_lifeguide"><a href="">Resources</a>
+                                                <div class="sub_menu sub_menu_p single_mega">
+                                                    <ul>
+                                                        <li><a href="index.html"><span>Home One</span></a></li>
+                                                        <li><a href="index-two.html"><span>Home Two</span></a></li>
+                                                        <li><a href="contact.html">Blog Detail Pages</a>
+                                                            <ul class="lev2sub lev2subp">
+                                                                <li><a href="blog-single-audio-post.html">Blog with
+                                                                    Aduio page</a></li>
+                                                                <li><a href="blog-single-link-post.html">Blog with Link
+                                                                    page</a></li>
+                                                                <li><a href="blog-single-post.html">Blog with Post
+                                                                    page</a></li>
+                                                                <li><a href="blog-single-quote-post.html">Blog with
+                                                                    Quote page</a></li>
+                                                                <li><a href="blog-single-slider-post.html">Blog with
+                                                                    Slider page</a>
+                                                                </li>
+                                                                <li><a href="blog-single-twitter-post.html">Blog with
+                                                                    Twitter page</a>
+                                                                </li>
+                                                                <li class="last-child"><a
+                                                                        href="blog-single-video-post.html">Blog with
+                                                                    Video page</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="about.html">About page</a></li>
+                                                        <li><a href="contact.html">Contact Page</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="nav_gadgets"><a href="">Useful Articles</a></li>
+                                            <li class="nav_video"><a href="">Video</a></li>
+                                        </ul>
+                                    </nav>
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
+                                    <!-- ~~~=| Mobile Navigation END |=~~~ -->
+                                    <div class="only-for-mobile">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <ul class="ofm">
+                                                <li class="m_nav"><i class="fa fa-bars"></i> Hash</li>
+                                            </ul>
 
-      <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
+                                            <!-- MOBILE MENU -->
+                                            <div class="mobi-menu">
+                                                <div id='cssmenu'>
+                                                    <ul>
+                                                        <li class='has-sub'><a href='index.html'><span>Home</span></a>
+                                                            <ul class="sub-nav">
+                                                                <li><a href="index.html"><span>Home One</span></a></li>
+                                                                <li><a href="index-two.html"><span>Home Two</span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class='has-sub'><a href='#'><span>News</span></a>
+                                                            <ul class="sub-nav">
+                                                                <li><a href="#"><span>Hockey</span></a></li>
+                                                                <li><a href="#"><span>Cricket</span></a></li>
+                                                                <li><a href="#"><span>Football</span></a></li>
+                                                                <li><a href="#"><span>Boxing</span></a></li>
+                                                                <li><a href="#"><span>Bat Mitton</span></a></li>
+                                                                <li><a href="#"><span>Others</span></a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href='#'><span>Fashion</span></a></li>
+                                                        <li class='has-sub'><a href='#'><span>Lifeguide</span></a>
+                                                            <ul>
+                                                                <li class='has-sub'><a
+                                                                        href='#'><span>features</span></a>
+                                                                    <ul class="has-sub">
+                                                                        <li><a href="#"><span>Business</span></a></li>
+                                                                        <li><a href="#"><span>Technology</span></a></li>
+                                                                        <li><a href="#"><span>Politics</span></a></li>
+                                                                        <li><a href="#"><span>Sport</span></a></li>
+                                                                        <li><a href="#"><span>Science</span></a></li>
+                                                                        <li><a href="#"><span>Health</span></a></li>
+                                                                        <li><a href="#"><span>Fashion Shirts</span></a>
+                                                                        </li>
+                                                                        <li class="last"><a href="./#"><span>CASUAL SHIRTS</span></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href='#'><span>CHILDREN</span></a></li>
+                                                        <li class='has-sub'><a href='#'><span>Pages</span></a>
+                                                            <ul class="sub-nav">
+                                                                <li><a href="about.html"><i
+                                                                        class="fa fa-angle-right"></i>About page</a>
+                                                                </li>
+                                                                <li><a href="contact.html"><i
+                                                                        class="fa fa-angle-right"></i>Contact Page</a>
+                                                                </li>
+                                                                <li><a href="blog-single-audio-post.html"><i
+                                                                        class="fa fa-angle-right"></i>Blog with Aduio
+                                                                    page</a></li>
+                                                                <li><a href="blog-single-link-post.html"><i
+                                                                        class="fa fa-angle-right"></i>Blog with Link
+                                                                    page</a></li>
+                                                                <li><a href="blog-single-post.html"><i
+                                                                        class="fa fa-angle-right"></i>Blog
+                                                                    with Post page</a></li>
+                                                                <li><a href="blog-single-quote-post.html"><i
+                                                                        class="fa fa-angle-right"></i>Blog with Quote
+                                                                    page</a></li>
+                                                                <li><a href="blog-single-slider-post.html"><i
+                                                                        class="fa fa-angle-right"></i>Blog with Slider
+                                                                    page</a></li>
+                                                                <li><a href="blog-single-twitter-post.html"><i
+                                                                        class="fa fa-angle-right"></i>Blog with Twitter
+                                                                    page</a></li>
+                                                                <li><a href="blog-single-video-post.html"><i
+                                                                        class="fa fa-angle-right"></i>Blog with Video
+                                                                    page</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href='#'><span>Gadgets</span></a></li>
+                                                        <li><a href='#'><span>Lifestyle</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ~~~=| Mobile Navigation START |=~~~ -->
 
-  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ~~~=| Main Navigation END |=~~~ -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ~~~=| Logo Area END |=~~~ -->
 
 </header>
+<!-- ~~~=| Header END |=~~~ -->
