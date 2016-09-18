@@ -15,20 +15,36 @@
  *
  *
  * Author : Rahul Hada <hada.rahul@gmail.com>
-          : Nischal Bhatewara <      > 
+          : Nischal M <nischal.bhatewara@gmail.com> 
  * Date   : 06/09/2016 
  */
 /* This program is used to calculate GCD using Euclidean algorithm[Iterative] & [Recursive] , Bruteforce Algorithm
  */ 
 #include<stdio.h>
 #include <time.h>
+#include <stdlib.h> // for strtol
 #include "gcd.h"
-int main()
+
+void autoRun(long int, long int);
+double getTime(clock_t, clock_t);
+
+// global variables
+clock_t start,end;
+
+int main(int argc, char const *argv[])
 {
+
+	// check for given args
+	if(argc > 0 && argc == 3){
+		autoRun((long int) strtol(argv[1], NULL, 10) // A
+			, (long int) strtol(argv[2], NULL, 10) // B
+			);
+		return 0;
+	}
+
 	long int a,b;
 	int c;
 	int ch;
-	clock_t start,end;
 	printf("Enter Two numbers to calculate GCD:\n");
 	printf("A=");
 	scanf("%ld",&a);
@@ -45,7 +61,7 @@ int main()
 	if (a < 0) a = -a;
 	if (b < 0) b = -b;
 
-	printf("User (1) Recursive Algorithm or (2) Euclidean Algorithm 3) Brute-force Algorithm? ");
+	printf("Use (1) Recursive Algorithm (2) Euclidean Algorithm (3) Brute-force Algorithm? ");
 	scanf("%d", &ch);
 	switch(ch){
 		case 1: 
@@ -70,6 +86,47 @@ int main()
 			printf("Invalid input! Using brute force algorithm!\n");
 	}
 	printf("GCD=%d\n",c);
-	printf("CPU Time:%lf\n",((double) (end - start)) / CLOCKS_PER_SEC);
+	printf("CPU Time:%lf\n", getTime(start, end));
 	return 0;
+}
+
+double getTime(clock_t start, clock_t end){
+	return ((double) (end - start)) / CLOCKS_PER_SEC;
+}
+
+void autoRun(long int a, long int b){
+
+	long int c;
+	// open file to write output
+    FILE *fptr;
+    fptr = fopen("values.txt","a");
+    if(fptr == NULL){
+       printf("File Error!");
+       exit(1);
+    }
+	
+	printf("Running for %ld and %ld\n", a, b);
+	fprintf(fptr, "\nA:%ld\tB:%ld\tGCD:%d", a, b, gcd_euclidean(a, b));
+
+   	// recursive
+    start = clock();
+    c = gcd_recursive(a, b);
+    end = clock();
+   	fprintf(fptr, "\nRecursive: %lf", getTime(start, end));
+
+   	// euclidean
+    start = clock();
+    c = gcd_euclidean(a, b);
+    end = clock();
+   	fprintf(fptr, "\nEuclidean: %lf", getTime(start, end));
+
+	// brute force
+    start = clock();
+    c = gcd_bruteforce(a, b);
+    end = clock();
+   	fprintf(fptr, "\nBruteforce: %lf", getTime(start, end));
+
+	fprintf(fptr, "\n\n"); // keep file legible
+
+    fclose(fptr);
 }
