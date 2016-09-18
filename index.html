@@ -4,6 +4,20 @@ layout: default
 
 <div class="home">
 
+  <script>
+      $.ajax({
+          url: "{{site.baseurl}}/CS702",
+          success: function(data){
+              $(data).find("a:contains(.html)").each(function(){
+                  // will loop through
+                  var file = $(this).attr("href");
+
+                  $('<p></p>').html(file).appendTo('a div of your choice')
+
+              });
+          }
+      });
+  </script>
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
