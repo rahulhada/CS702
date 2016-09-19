@@ -1,90 +1,30 @@
 
-A:4774	B:25324	GCD:2
-Recursive: 0.000001
-Euclidean: 0.000000
-Bruteforce: 0.000366
-
-
-A:27964	B:4546	GCD:2
-Recursive: 0.000001
-Euclidean: 0.000000
-Bruteforce: 0.000054
-
-
-A:3679	B:4319	GCD:1
-Recursive: 0.000001
-Euclidean: 0.000000
-Bruteforce: 0.000056
-
-
-A:16158	B:24048	GCD:6
+A:5578	B:14520	GCD:2
 Recursive: 0.000002
 Euclidean: 0.000001
-Bruteforce: 0.000766
+Bruteforce: 0.000166
 
 
-A:512	B:24330	GCD:2
-Recursive: 0.000002
-Euclidean: 0.000001
-Bruteforce: 0.000366
-
-
-A:11297	B:11052	GCD:1
+A:22417	B:31579	GCD:1
 Recursive: 0.000001
 Euclidean: 0.000000
-Bruteforce: 0.000147
+Bruteforce: 0.000370
 
 
-A:1713	B:20351	GCD:1
-Recursive: 0.000001
-Euclidean: 0.000001
-Bruteforce: 0.000276
-
-
-A:17133	B:5392	GCD:1
+A:6487	B:15870	GCD:1
 Recursive: 0.000001
 Euclidean: 0.000000
-Bruteforce: 0.000064
+Bruteforce: 0.000197
 
 
-A:849	B:31196	GCD:1
-Recursive: 0.000001
-Euclidean: 0.000001
-Bruteforce: 0.000512
-
-
-A:192	B:31385	GCD:1
-Recursive: 0.000001
-Euclidean: 0.000001
-Bruteforce: 0.000406
-
-
-A:25718	B:24155	GCD:1
-Recursive: 0.000001
+A:23325	B:160	GCD:5
+Recursive: 0.000003
 Euclidean: 0.000000
-Bruteforce: 0.000283
+Bruteforce: 0.000004
 
 
-A:9788	B:8446	GCD:2
-Recursive: 0.000002
-Euclidean: 0.000001
-Bruteforce: 0.000104
-
-
-A:26626	B:25504	GCD:2
+A:7395	B:17219	GCD:1
 Recursive: 0.000001
 Euclidean: 0.000001
-Bruteforce: 0.000264
-
-
-A:10697	B:9795	GCD:1
-Recursive: 0.000001
-Euclidean: 0.000001
-Bruteforce: 0.000098
-
-
-A:27535	B:26853	GCD:1
-Recursive: 0.000001
-Euclidean: 0.000000
-Bruteforce: 0.000264
+Bruteforce: 0.000199
 

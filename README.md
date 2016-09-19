@@ -1,4 +1,4 @@
-#CS702
+<img src="./images/cryptoLab.png"/>
 
 [![Join the chat at https://gitter.im/CS702/CryptoFrameWork](https://badges.gitter.im/CS702/CryptoFrameWork.svg)](https://gitter.im/CS702/CryptoFrameWork?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 <br><br>This repo is  dedicated to my course CS-702 (Cryptography and Network Security ) at Alliance University.
