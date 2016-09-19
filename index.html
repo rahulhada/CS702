@@ -18,7 +18,7 @@ layout: default
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <div class="fs_items_left">
                                             <div class="single_fs_items_left_text">
-                                                <div class="fs_items_left_img"><img src="{{post.coverUrl}}" alt=""/>
+                                                <div class="fs_items_left_img"><img src="{{site.baseurl}}{{post.coverUrl}}" alt=""/>
                                                 </div>
                                                 <h4><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
                                                 </h4>
@@ -39,7 +39,7 @@ layout: default
                                         <div class="all_items_right">
                                             {% for post in site.tags.recent limit:3 %}
                                             <div class="fs_items_right">
-                                                <div class="single_fs_items_img"><img src="{{post.coverUrl}}"
+                                                <div class="single_fs_items_img"><img src="{{site.baseurl}}{{post.coverUrl}}"
                                                                                       alt="Single items"/></div>
                                                 <div class="single_fs_items_right_text">
                                                     <h4>
@@ -72,7 +72,7 @@ layout: default
 
                                                 {% for post in site.tags.article-l limit:3 %}
                                                 <div class="fs_items_right">
-                                                    <div class="single_fs_items_img"><img src="{{post.coverUrl}}"
+                                                    <div class="single_fs_items_img"><img src="{{site.baseurl}}{{post.coverUrl}}"
                                                                                           alt="Single items"/></div>
                                                     <div class="single_fs_items_right_text">
                                                         <h4><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
@@ -102,7 +102,7 @@ layout: default
                                                 {% for post in site.tags.article limit:3 %}
                                                 <div class="fs_items_right">
                                                     <div class="fs_items_right">
-                                                        <div class="single_fs_items_img"><img src="{{post.coverUrl}}"
+                                                        <div class="single_fs_items_img"><img src="{{site.baseurl}}{{post.coverUrl}}"
                                                                                               alt="Single items"/></div>
                                                         <div class="single_fs_items_right_text">
                                                             <h4><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
@@ -140,10 +140,10 @@ layout: default
                             {% for post in site.posts limit:10 %}
                             <a href="{{ post.url | prepend: site.baseurl }}">
                                 <div class="fs_items_right">
-                                    <div class="single_fs_items_img"><img alt="Single items" src="{{post.coverUrl}}">
+                                    <div class="single_fs_items_img"><img alt="Single items" src="{{site.baseurl}}{{post.coverUrl}}">
                                     </div>
                                     <div class="single_fs_items_right_text">
-                                        <h4><a href="blog-single-slider-post.html">{{ post.title }}</a></h4>
+                                        <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
                                         {% if post.subtitle %}
                                         <h5 class="post-subtitle">
                                             {{ post.subtitle | truncatewords: 50 | strip_html}}
