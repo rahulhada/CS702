@@ -74,7 +74,7 @@ int main(int argc, char const *argv[])
 	if (b < 0) b = -b;
 
     do {
-        printf("\n(1) Recursive Algorithm or (2) Euclidean Algorithm 3) Brute-force Algorithm?\n");
+        printf("\n(-1) Exit || (1) Recursive Algorithm || (2) Euclidean Algorithm || 3) Brute-force Algorithm?\n");
         printf("Option = ");
         scanf("%d", &ch);
         

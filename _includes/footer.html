@@ -15,5 +15,15 @@
 <!-- ~~~=| Footer END |=~~~ -->
 
 
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"
-        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script>
+//    write("The contents of " + getCurrentFolder());
+//alert(getCurrentFolder+"sa");
+    fileName = findFirstFile("*.*"); // Find the first file matching the filter
+    alert(fileName);
+    while(fileName.length)
+    {
+        write(fileName);
+        fileName = findNextFile();  // Find the next file matching the filter
+    }
+</script>
