@@ -2,12 +2,165 @@
 layout: default
 ---
 
-<!-- ~~~=| Banner START |=~~~ -->
-<section class="hp_banner_area section_padding margin-header_top">
+<!-- ~~~=| Main Wrapper END |=~~~ -->
+<section class="main_items_wrapper" style="padding-top: 130px;">
     <div class="no-container">
         <div class="row">
-            <div id="container_id"/>
+            <div class="col-md-9 col-sm-9 col-xs-12">
+                <!-- ~~~=| crypto area START |=~~~ -->
+                <div class="crypto_area">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="crypto_area_box">
+                                <div class="row">
+                                    <!-- Showing the first post with tags as recent-f [limit is 1 ]-->
+                                    {% for post in site.tags.recent-f limit:1 %}
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="fs_items_left">
+                                            <div class="single_fs_items_left_text">
+                                                <div class="fs_items_left_img"><img src="{{post.coverUrl}}" alt=""/>
+                                                </div>
+                                                <h4><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+                                                </h4>
+                                                {% if post.subtitle %}
+                                                <h5 class="post-subtitle">
+                                                    {{ post.subtitle | truncatewords: 50 | strip_html}}
+                                                </h5>
+                                                {% endif %}
+                                                <p><i class="fa fa-clock-o"></i> Posted on {{ post.date
+                                                    | date: "%B %-d, %Y" }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+
+                                    <!-- Showing three post with the tags as recent [limit is 3 ] -->
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="all_items_right">
+                                            {% for post in site.tags.recent limit:3 %}
+                                            <div class="fs_items_right">
+                                                <div class="single_fs_items_img"><img src="{{post.coverUrl}}"
+                                                                                      alt="Single items"/></div>
+                                                <div class="single_fs_items_right_text">
+                                                    <h4>
+                                                        <a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+                                                    </h4>
+                                                    <p><a href="">crypto </a>| <i class="fa fa-clock-o"></i> Posted on
+                                                        {{ post.date
+                                                        | date: "%B %-d, %Y" }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            {% endfor %}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header_fasion gadgets_heading" style="padding-bottom: 30px;">
+                                <div class="left_crypto main_nav_box">
+                                    <ul>
+                                        <li class=""><a href="#">Usefull Articles</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gadgets_area_box" style="margin-top: 50px;">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="fs_items_left fs_gadgets_items_left">
+                                            <div class="all_items_right">
+
+                                                {% for post in site.tags.article-l limit:3 %}
+                                                <div class="fs_items_right">
+                                                    <div class="single_fs_items_img"><img src="{{post.coverUrl}}"
+                                                                                          alt="Single items"/></div>
+                                                    <div class="single_fs_items_right_text">
+                                                        <h4><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+                                                        </h4>
+                                                        {% if post.subtitle %}
+                                                        <h5 class="">
+                                                            {{ post.subtitle | truncatewords: 50 | strip_html}}
+                                                        </h5>
+                                                        {% endif %}
+                                                        <p><a class="gad_color" href="#">Article </a>| <i
+                                                                class="fa fa-clock-o"></i> Posted on
+                                                            {{ post.date
+                                                            | date: "%B %-d, %Y" }}</p>
+                                                    </div>
+                                                </div>
+                                                {% endfor %}
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="fs_items_left fs_gadgets_items_left">
+
+                                            <div class="all_items_right">
+                                                {% for post in site.tags.article limit:3 %}
+                                                <div class="fs_items_right">
+                                                    <div class="fs_items_right">
+                                                        <div class="single_fs_items_img"><img src="{{post.coverUrl}}"
+                                                                                              alt="Single items"/></div>
+                                                        <div class="single_fs_items_right_text">
+                                                            <h4><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a>
+                                                            </h4>
+                                                            {% if post.subtitle %}
+                                                            <h5 class="">
+                                                                {{ post.subtitle | truncatewords: 50 | strip_html}}
+                                                            </h5>
+                                                            {% endif %}
+                                                            <p><a class="gad_color" href="#">Article </a>| <i
+                                                                    class="fa fa-clock-o"></i> Posted on
+                                                                {{ post.date
+                                                                | date: "%B %-d, %Y" }}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                {% endfor %}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ~~~=| crypto area END |=~~~ -->
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <div class="home_sidebar">
+                    <div class="follow_us_side">
+                        <h2>Latest Post</h2>
+                        <div class="all_items_right" style="overflow: hidden;overflow-y: scroll;height: 500px;">
+
+                            {% for post in site.posts limit:10 %}
+                            <a href="{{ post.url | prepend: site.baseurl }}">
+                                <div class="fs_items_right">
+                                    <div class="single_fs_items_img"><img alt="Single items" src="{{post.coverUrl}}">
+                                    </div>
+                                    <div class="single_fs_items_right_text">
+                                        <h4><a href="blog-single-slider-post.html">{{ post.title }}</a></h4>
+                                        {% if post.subtitle %}
+                                        <h5 class="post-subtitle">
+                                            {{ post.subtitle | truncatewords: 50 | strip_html}}
+                                        </h5>
+                                        {% endif %}
+                                        <p><a href="">crypto | </a> <i class="fa fa-clock-o"></i> Posted on {{ post.date
+                                            | date: "%B %-d, %Y" }} </p>
+                                    </div>
+                                </div>
+                            </a>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<!-- ~~~=| Banner END |=~~~ -->
+<!-- ~~~=| Main Wrapper END |=~~~ -->

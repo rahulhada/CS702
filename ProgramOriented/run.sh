@@ -2,18 +2,18 @@
 #Script to run all the programs from the commandline without the
 #user having to compile it
 
+#Display inputs to the user
+iOps=100
+#Loop until user wants to exit
+while [ "$iOps" -gt 0 ]
+do
 
 #Header "Library Name"
 echo "------------------------------"
 echo "     CrypToFrameWork"
 echo "------------------------------"
 
-
-#Display inputs to the user
-iOps=100
-#Loop until user wants to exit
-while [ "$iOps" -gt 0 ]
-do
+#Display option to the user
 echo " "
 echo "[ 1]. GCD"
 echo "[-2]. Exit"
