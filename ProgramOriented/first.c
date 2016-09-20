@@ -46,11 +46,18 @@ int main(int argc, char const *argv[])
 {
 
 	// check for given args
-	if(argc > 0 && argc == 3){
-		autoRun((long int) strtol(argv[1], NULL, 10) // A
-			, (long int) strtol(argv[2], NULL, 10) // B
-			);
-		return 0;
+	if(argc > 0){
+	    if(argc == 3){
+            autoRun((long int) strtol(argv[1], NULL, 10) // A
+                , (long int) strtol(argv[2], NULL, 10) // B
+                );
+            return 0;
+		}else{
+		    autoRunTest((long int) strtol(argv[1], NULL, 10) // A
+                            , (long int) strtol(argv[2], NULL, 10) // B
+                            );
+                        return 0;
+		}
 	}
 
 	long int a,b;
@@ -133,7 +140,7 @@ void autoRun(long int a, long int b){
        printf("File Error!");
        exit(1);
     }
-	
+
 	printf("Running for %ld and %ld\n", a, b);
 	fprintf(fptr, "\nA:%ld\tB:%ld\tGCD:%d", a, b, gcd_euclidean(a, b));
 
@@ -158,4 +165,31 @@ void autoRun(long int a, long int b){
 	fprintf(fptr, "\n\n"); // keep file legible
 
     fclose(fptr);
+
+
+}
+
+void autoRunTest(long int a. long int b){
+    int i=0;
+    printf("For the number A = %ld & B = %ld",a,b);
+       for(i=0;i<3;i++){
+            start = clock();
+            switch (i+1) {
+
+                case 1:
+                    //Recursive Algorithm implementation
+                    mDisplay(gcd_recursive(a, b), "Recursive");
+                    break;
+                case 2:
+                    //Euclidean Algorithm implementation
+                    mDisplay(gcd_euclidean(a, b),"Eucledean");
+                    break;
+
+                case 3:
+                    //Brute Force Algorithm implementation
+                    mDisplay(gcd_bruteforce(a,b),"BruteForece");
+                    break;
+
+            }
+        }
 }
