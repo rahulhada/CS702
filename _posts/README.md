@@ -16,10 +16,10 @@ tag: [ article-l ] //For categorisation of articles on the page
 
 <h4>The site as of now can categorise the following `tags`</h4>
 <br>
-`article-l` - Displayed under Usefull articles, positioned on the left side
-`article`   - Positioned on the right side
-`recent-f`  - Displayed on top of all contents and positioned on the left side
-`recent`    - POsitioned on the right side
+`article-l` - Displayed under Usefull articles, positioned on the left side<br>
+`article`   - Positioned on the right side<br>
+`recent-f`  - Displayed on top of all contents and positioned on the left side<br>
+`recent`    - POsitioned on the right side<br>
 
 <h4>Naming Convention of `_post` file</h4><br>
 `YYYY-MM-DD-name-of-the-post.markdown`
