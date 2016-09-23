@@ -18,22 +18,24 @@ int main(int argc, char const *argv[])
 
 	mat = (unsigned long long int *) malloc(Z * Z * sizeof(unsigned long long int));
 
-	for (i = 0; i < Z; ++i)
+	for (i = 0; i <= Z / 2; ++i)
 		for (j = 0; j < Z; ++j) {
 			unsigned long long int temp = (i * j) % Z;
 			*(mat + i * Z + j) = temp;
 			if (temp == 1) {
 				//printf("\nKey found: {%llu, %llu}", i, j);
+				//printf("\nKey found: {%llu, %llu}", Z - i, Z - j);
 				++keyCount;
+				if (!(i == Z - i && j == Z - j)) ++keyCount;
 			}
 		}
 
 	printf("\nTotal keyCount for %llu: %llu\n\n", Z, keyCount);
 
-	/* Print the table. Not recommended for large values of Z. Use only for debug
-	for (i = 0; i < Z; ++i){
+	// Print the table. Not recommended for large values of Z. Use only for debug
+	/*for (i = 0; i < Z; ++i){
 		for (j = 0; j < Z; ++j)
-			printf("%lu\t", *(mat + i * Z + j));
+			printf("%llu\t", *(mat + i * Z + j));
 		printf("\n");
 	}*/
 
