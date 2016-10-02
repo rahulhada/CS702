@@ -28,6 +28,9 @@
 int gcd_recursive(int ,int);
 int gcd_euclidean(int ,int);
 int gcd_bruteforce(int ,int);
+// adding iterative as well
+int gcd_iterative(int, int);
+// end iterative 
 int gcd(int, int);
 void display_CPU_Time();
 clock_t start,end;
@@ -52,7 +55,7 @@ int main()
 	if (a < 0) a = -a;
 	if (b < 0) b = -b;
 
-	printf("User (1) Recursive Algorithm or (2) Euclidean Algorithm 3) Brute-force Algorithm? ");
+	printf("User (1) Recursive Algorithm or (2) Euclidean Algorithm (3) Brute-force Algorithm? (4) Iterative Algorithm ");
 	scanf("%d", &ch);
 
 	switch(ch){
@@ -61,7 +64,9 @@ int main()
 		case 2: c = gcd_euclidean(a, b);
 		break;
 		case 3:
-		//	c= gcd_bruteforce(a,b);
+			c= gcd_bruteforce(a,b);
+		case 4:
+			c=gcd_iterative(a,b);
 		break;
 		default: printf("Invalid input! Using brute force algorithm!\n");
 		exit(0);
@@ -82,6 +87,20 @@ int gcd_recursive(int a, int b)
 	if(a == 0) return b;
 	else gcd(b % a, a);
       end = clock();
+}
+
+// Iterative Algorithm
+int gcd_iterative(int a, int b)
+{
+	start = clock();
+	long r;
+	while(b!=0) {
+		r=a%b;
+		a=b;
+		b=r;
+	}
+	end = clock();
+	return a;
 }
 
 // Euclidean Algorithm 
