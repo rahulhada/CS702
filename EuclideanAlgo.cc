@@ -31,6 +31,7 @@ int gcd_bruteforce(int ,int);
 // adding iterative as well
 int gcd_iterative(int, int);
 // end iterative 
+int gcd_binary(int,int);
 int gcd(int, int);
 void display_CPU_Time();
 clock_t start,end;
@@ -55,7 +56,7 @@ int main()
 	if (a < 0) a = -a;
 	if (b < 0) b = -b;
 
-	printf("User (1) Recursive Algorithm or (2) Euclidean Algorithm (3) Brute-force Algorithm? (4) Iterative Algorithm ");
+	printf("User (1) Recursive Algorithm or (2) Euclidean Algorithm (3) Brute-force Algorithm? (4) Iterative Algorithm (5) Binary GCD Algorithm");
 	scanf("%d", &ch);
 
 	switch(ch){
@@ -67,6 +68,8 @@ int main()
 			c= gcd_bruteforce(a,b);
 		case 4:
 			c=gcd_iterative(a,b);
+		case 5:
+			c=gcd_binary(a,b);
 		break;
 		default: printf("Invalid input! Using brute force algorithm!\n");
 		exit(0);
@@ -100,6 +103,13 @@ int gcd_iterative(int a, int b)
 		b=r;
 	}
 	end = clock();
+	return a;
+}
+
+//Binary GCD Algorithm
+int gdc_binary(int a, int b)
+{
+	while(b) b^=a^=b^=a%=b;
 	return a;
 }
 
