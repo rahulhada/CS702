@@ -1,0 +1,23 @@
+normal for 1000 values
+
+real	0m5.531s
+user	0m3.168s
+sys	0m0.548s
+
+optimised for 1000 values
+
+real	0m2.998s
+user	0m0.932s
+sys	0m0.336s
+
+normal for 4000 values 
+
+real	3m56.208s
+user	3m23.276s
+sys	0m24.048s
+
+optimised for 4000 values
+
+real	2m43.503s
+user	2m4.856s
+sys	0m29.968s
